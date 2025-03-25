@@ -1,609 +1,908 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magi Sharma's Developer Portfolio</title>
   
-# ✨ Welcome to Magi Sharma's Coding Universe ✨
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome for additional icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    // Tailwind Configuration
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6A5ACD',
+            primaryDark: '#5849c2',
+            secondary: '#98b982',
+            dark: '#0D1117',
+            light: '#f8f9fa'
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+    
+    // Check for dark mode preference
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+  
+  <style>
+    /* Custom animations and styles */
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      10% { transform: rotate(14deg); }
+      20% { transform: rotate(-8deg); }
+      30% { transform: rotate(14deg); }
+      40% { transform: rotate(-4deg); }
+      50% { transform: rotate(10deg); }
+      60% { transform: rotate(0deg); }
+      100% { transform: rotate(0deg); }
+    }
+    
+    .animate-wave {
+      animation: wave 1.5s infinite;
+      transform-origin: 70% 70%;
+      display: inline-block;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .animate-pulse-slow {
+      animation: pulse 3s infinite;
+    }
+    
+    .tech-badge {
+      transition: all 0.3s ease;
+    }
+    
+    .tech-badge:hover {
+      transform: translateY(-5px);
+    }
+    
+    .project-card {
+      transition: all 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+    
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(90deg, #6A5ACD, #8A2BE2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Custom scroll bar */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #6A5ACD;
+      border-radius: 6px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #5849c2;
+    }
+    
+    .dark ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+    
+    /* Responsive fixes */
+    @media (max-width: 640px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
 
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=30&pause=1000&color=6A5ACD&center=true&vCenter=true&random=false&width=600&height=100&lines=Full-Stack+Developer;Problem+Solver;Tech+Enthusiast;Lifelong+Learner;Code+Craftsman;UI/UX+Enthusiast" alt="Typing SVG" />
-</div>
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-
-<!-- Theme Mode -->
-<div align="center">
-  <p>This profile adapts to your GitHub theme preference! <strong>Toggle between dark and light mode</strong> in your GitHub settings!</p>
-</div>
-
-<!-- GitHub Contribution Snake Animation - Auto adapts to dark/light mode -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg">
-  <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg">
-</picture>
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-
-<!-- Status Section -->
-<div align="center">
-  <p>
-    <img src="https://img.shields.io/badge/Current%20Time-2025--03--25%2018%3A03%3A32-6A5ACD?style=for-the-badge" alt="Current Time" />
-    <img src="https://img.shields.io/github/last-commit/magi8101/magi8101?style=for-the-badge&color=6A5ACD&label=Last%20Updated" alt="Last Updated" />
-  </p>
-</div>
-
-<!-- Latest Activity -->
-<div align="center">
-  <h3>🔥 Latest Activity</h3>
-  <a href="https://github.com/magi8101?tab=repositories&sort=updated">
-    <!-- Will show form-builder as a fallback -->
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=form-builder&theme=tokyonight&hide_border=true&bg_color=0D1117">
-      <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=form-builder&theme=buefy&hide_border=true">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=form-builder&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-    </picture>
-  </a>
-</div>
-
-</div>
-
-<!-- About Me Section with Animation -->
-<div align="center">
-  <h2>
-    <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28" class="animated-hand">
-    About Me
-  </h2>
-</div>
-
-<table align="center" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td style="border: none;">
-      <p>I'm a passionate developer, tech enthusiast, and lifelong learner dedicated to creating impactful solutions through code. With expertise in both front-end and back-end development, I transform complex problems into elegant solutions.</p>
-      <ul>
-        <li>🔭 I'm currently working on expanding my development portfolio</li>
-        <li>🌱 I'm constantly learning new technologies and frameworks</li>
-        <li>💡 I love building beautiful, user-friendly interfaces and robust back-end systems</li>
-        <li>🚀 I thrive on solving complex problems and turning obstacles into growth opportunities</li>
-        <li>🌍 I believe in code that makes a difference in the world</li>
-        <li>🤝 Open to collaborations and exciting projects</li>
-      </ul>
-    </td>
-    <td style="border: none;">
-      <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="300" />
-    </td>
-  </tr>
-</table>
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <h2>
-    <img src="https://media.giphy.com/media/jSKBmKkvo2dPQQtsR1/giphy.gif" width="35">
-    Tech Stack & Tools
-  </h2>
-</div>
-
-<!-- Tech Stack Section -->
-<details open>
-  <summary><b>👨‍💻 Programming & Markup Languages</b></summary>
-  <br/>
-  <p align="center">
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-    <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown" />
-  </p>
-</details>
-
-<details open>
-  <summary><b>🧰 Frameworks & Libraries</b></summary>
-  <br/>
-  <p align="center">
-    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-    <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-    <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-  </p>
-</details>
-
-<details open>
-  <summary><b>🗄️ Databases & Cloud Hosting</b></summary>
-  <br/>
-  <p align="center">
-    <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-    <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-    <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
-    <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify" />
-    <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render" />
-  </p>
-</details>
-
-<details open>
-  <summary><b>💻 Software & Tools</b></summary>
-  <br/>
-  <p align="center">
-    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-    <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" />
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-    <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-    <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" alt="Postman" />
-    <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
-  </p>
-</details>
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <h2>
-    <img src="https://media.giphy.com/media/W5eoZHPpUx9sapR0eu/giphy.gif" width="30px" alt="Git"/> 
-    GitHub Stats
-  </h2>
-</div>
-
-<!-- GitHub Stats Cards - Auto adapts to dark/light mode with animations -->
-<div align="center">
-  <div class="stats-container">
-    <div class="stats-item">
-      <a href="https://github.com/magi8101">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=magi8101&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&bg_color=0D1117">
-          <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=magi8101&show_icons=true&theme=buefy&hide_border=true&count_private=true&include_all_commits=true">
-          <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=magi8101&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&bg_color=0D1117" alt="Magi's GitHub Stats" />
-        </picture>
-      </a>
+<body class="bg-gray-100 dark:bg-dark text-gray-800 dark:text-gray-200 font-poppins transition-colors duration-300">
+  <!-- Header/Navigation -->
+  <header class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
+    <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="text-xl font-bold gradient-text">Magi Sharma</a>
+      
+      <div class="flex items-center space-x-4">
+        <a href="#about" class="hidden md:block hover:text-primary dark:hover:text-primary transition-colors">About</a>
+        <a href="#skills" class="hidden md:block hover:text-primary dark:hover:text-primary transition-colors">Skills</a>
+        <a href="#projects" class="hidden md:block hover:text-primary dark:hover:text-primary transition-colors">Projects</a>
+        <a href="#stats" class="hidden md:block hover:text-primary dark:hover:text-primary transition-colors">Stats</a>
+        <a href="#contact" class="hidden md:block hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+        
+        <!-- Dark/Light Mode Toggle -->
+        <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+          <svg id="dark-icon" class="w-5 h-5 hidden dark:block text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/>
+          </svg>
+          <svg id="light-icon" class="w-5 h-5 block dark:hidden text-gray-800" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+          </svg>
+        </button>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" class="block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 shadow-md">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+        <a href="#about" class="py-2 hover:text-primary dark:hover:text-primary transition-colors">About</a>
+        <a href="#skills" class="py-2 hover:text-primary dark:hover:text-primary transition-colors">Skills</a>
+        <a href="#projects" class="py-2 hover:text-primary dark:hover:text-primary transition-colors">Projects</a>
+        <a href="#stats" class="py-2 hover:text-primary dark:hover:text-primary transition-colors">Stats</a>
+        <a href="#contact" class="py-2 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+      </div>
     </div>
-    <div class="stats-item">
-      <a href="https://github.com/magi8101">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=magi8101&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&background=0D1117">
-          <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=magi8101&theme=buefy&hide_border=true&date_format=M%20j%5B%2C%20Y%5D">
-          <img src="https://github-readme-streak-stats.herokuapp.com/?user=magi8101&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&background=0D1117" alt="Magi's GitHub Streak" />
-        </picture>
-      </a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-white to-gray-100 dark:from-dark dark:to-gray-900 py-16 md:py-24">
+    <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <span class="gradient-text">✨ Welcome to My</span>
+          <br/>
+          <span class="gradient-text">Coding Universe ✨</span>
+        </h1>
+        
+        <p class="text-xl md:text-2xl mb-8 text-gray-700 dark:text-gray-300">
+          Full-Stack Developer | Problem Solver | Tech Enthusiast
+        </p>
+        
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
+          <span class="rounded-full px-4 py-2 bg-primary/10 text-primary dark:bg-primary/20">React</span>
+          <span class="rounded-full px-4 py-2 bg-primary/10 text-primary dark:bg-primary/20">Next.js</span>
+          <span class="rounded-full px-4 py-2 bg-primary/10 text-primary dark:bg-primary/20">Node.js</span>
+          <span class="rounded-full px-4 py-2 bg-primary/10 text-primary dark:bg-primary/20">MongoDB</span>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#projects" class="px-6 py-3 bg-primary hover:bg-primaryDark text-white rounded-lg transition-colors duration-300 flex items-center justify-center">
+            <span>View Projects</span>
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </a>
+          <a href="#contact" class="px-6 py-3 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg transition-colors duration-300 flex items-center justify-center">
+            <span>Contact Me</span>
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="md:w-1/2 flex justify-center">
+        <div class="relative">
+          <!-- GitHub Contribution Snake Animation -->
+          <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" class="w-full max-w-lg animate-float hidden dark:block">
+          <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake Animation" class="w-full max-w-lg animate-float block dark:hidden">
+          
+          <!-- Status Badges -->
+          <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 flex flex-wrap justify-center gap-2">
+            <span class="bg-white dark:bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-800 dark:text-gray-200 shadow-md flex items-center">
+              <span class="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              Last Updated: 2025-03-25
+            </span>
+            <span class="bg-white dark:bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-800 dark:text-gray-200 shadow-md flex items-center">
+              <span class="inline-block w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+              <span id="profile-views">1,234</span> Profile Views
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="stats-item">
-      <a href="https://github.com/magi8101">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=magi8101&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&bg_color=0D1117">
-          <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=magi8101&layout=compact&theme=buefy&hide_border=true&langs_count=8">
-          <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=magi8101&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&bg_color=0D1117" alt="Magi's Top Languages" />
-        </picture>
-      </a>
+  </section>
+  
+  <!-- About Section -->
+  <section id="about" class="py-16 md:py-24 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative">
+            <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" class="w-full max-w-md rounded-lg shadow-xl animate-pulse-slow" alt="Coding animation">
+          </div>
+        </div>
+        
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold mb-6 flex items-center">
+            <span class="animate-wave mr-2">👋</span>
+            About Me
+          </h2>
+          
+          <p class="mb-6 text-lg">
+            I'm a passionate developer, tech enthusiast, and lifelong learner dedicated to creating impactful solutions through code. With expertise in both front-end and back-end development, I transform complex problems into elegant solutions.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <span class="mr-3 text-xl text-primary">🔭</span>
+              <span>I'm currently working on expanding my development portfolio</span>
+            </div>
+            <div class="flex items-start">
+              <span class="mr-3 text-xl text-primary">🌱</span>
+              <span>I'm constantly learning new technologies and frameworks</span>
+            </div>
+            <div class="flex items-start">
+              <span class="mr-3 text-xl text-primary">💡</span>
+              <span>I love building beautiful, user-friendly interfaces and robust back-end systems</span>
+            </div>
+            <div class="flex items-start">
+              <span class="mr-3 text-xl text-primary">🚀</span>
+              <span>I thrive on solving complex problems and turning obstacles into growth opportunities</span>
+            </div>
+            <div class="flex items-start">
+              <span class="mr-3 text-xl text-primary">🌍</span>
+              <span>I believe in code that makes a difference in the world</span>
+            </div>
+            <div class="flex items-start">
+              <span class="mr-3 text-xl text-primary">🤝</span>
+              <span>Open to collaborations and exciting projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="stats-item">
-      <a href="https://github.com/magi8101">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=magi8101&theme=tokyonight&no-frame=true&row=2&column=3&bg_color=0D1117">
-          <source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=magi8101&theme=flat&no-frame=true&row=2&column=3">
-          <img src="https://github-profile-trophy.vercel.app/?username=magi8101&theme=tokyonight&no-frame=true&row=2&column=3&bg_color=0D1117" alt="Magi's Trophies" />
-        </picture>
-      </a>
+  </section>
+  
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 md:py-24 bg-gray-100 dark:bg-gray-800">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-3xl font-bold mb-12 text-center">
+        <span class="mr-2">💻</span>
+        Skills & Technologies
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <!-- Programming Languages -->
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <span class="mr-2">👨‍💻</span>
+            Programming Languages
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge px-3 py-1 bg-[#F7DF1E] text-black rounded-md text-sm">JavaScript</span>
+            <span class="tech-badge px-3 py-1 bg-[#007ACC] text-white rounded-md text-sm">TypeScript</span>
+            <span class="tech-badge px-3 py-1 bg-[#3776AB] text-white rounded-md text-sm">Python</span>
+            <span class="tech-badge px-3 py-1 bg-[#E34F26] text-white rounded-md text-sm">HTML5</span>
+            <span class="tech-badge px-3 py-1 bg-[#1572B6] text-white rounded-md text-sm">CSS3</span>
+          </div>
+        </div>
+        
+        <!-- Frameworks & Libraries -->
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <span class="mr-2">🧰</span>
+            Frameworks & Libraries
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge px-3 py-1 bg-[#20232A] text-[#61DAFB] rounded-md text-sm">React</span>
+            <span class="tech-badge px-3 py-1 bg-black text-white rounded-md text-sm">Next.js</span>
+            <span class="tech-badge px-3 py-1 bg-[#339933] text-white rounded-md text-sm">Node.js</span>
+            <span class="tech-badge px-3 py-1 bg-black text-white rounded-md text-sm">Express.js</span>
+            <span class="tech-badge px-3 py-1 bg-[#38B2AC] text-white rounded-md text-sm">Tailwind CSS</span>
+            <span class="tech-badge px-3 py-1 bg-[#563D7C] text-white rounded-md text-sm">Bootstrap</span>
+          </div>
+        </div>
+        
+        <!-- Databases & Cloud -->
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <span class="mr-2">🗄️</span>
+            Databases & Cloud
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge px-3 py-1 bg-[#4EA94B] text-white rounded-md text-sm">MongoDB</span>
+            <span class="tech-badge px-3 py-1 bg-[#316192] text-white rounded-md text-sm">PostgreSQL</span>
+            <span class="tech-badge px-3 py-1 bg-[#005C84] text-white rounded-md text-sm">MySQL</span>
+            <span class="tech-badge px-3 py-1 bg-black text-white rounded-md text-sm">Vercel</span>
+            <span class="tech-badge px-3 py-1 bg-[#00C7B7] text-white rounded-md text-sm">Netlify</span>
+            <span class="tech-badge px-3 py-1 bg-[#46E3B7] text-black rounded-md text-sm">Render</span>
+          </div>
+        </div>
+        
+        <!-- Tools & Software -->
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <span class="mr-2">🛠️</span>
+            Tools & Software
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge px-3 py-1 bg-[#F05032] text-white rounded-md text-sm">Git</span>
+            <span class="tech-badge px-3 py-1 bg-[#007ACC] text-white rounded-md text-sm">VS Code</span>
+            <span class="tech-badge px-3 py-1 bg-[#100000] text-white rounded-md text-sm">GitHub</span>
+            <span class="tech-badge px-3 py-1 bg-[#2CA5E0] text-white rounded-md text-sm">Docker</span>
+            <span class="tech-badge px-3 py-1 bg-[#FF6C37] text-white rounded-md text-sm">Postman</span>
+            <span class="tech-badge px-3 py-1 bg-[#F24E1E] text-white rounded-md text-sm">Figma</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Development Timeline -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-semibold text-center mb-10">My Development Journey</h3>
+        <div class="relative">
+          <!-- Timeline line -->
+          <div class="absolute inset-0 flex justify-center">
+            <div class="w-1 bg-primary bg-opacity-30"></div>
+          </div>
+          
+          <!-- Timeline items -->
+          <div class="relative z-10 flex flex-col space-y-12">
+            <!-- Beginning -->
+            <div class="flex flex-col md:flex-row md:items-center">
+              <div class="md:w-1/2 md:pr-8 md:text-right">
+                <h4 class="text-xl font-medium mb-1">Beginning</h4>
+                <p>Started with HTML, CSS, and basic JavaScript</p>
+              </div>
+              <div class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto md:mx-0">
+                <span>🌱</span>
+              </div>
+              <div class="md:w-1/2 md:pl-8 md:text-left"></div>
+            </div>
+            
+            <!-- Growth -->
+            <div class="flex flex-col md:flex-row md:items-center">
+              <div class="md:w-1/2 md:pr-8 md:text-right"></div>
+              <div class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto md:mx-0">
+                <span>🚀</span>
+              </div>
+              <div class="md:w-1/2 md:pl-8 md:text-left">
+                <h4 class="text-xl font-medium mb-1">Growth</h4>
+                <p>Expanded to React, Node.js, and database technologies</p>
+              </div>
+            </div>
+            
+            <!-- Mastery -->
+            <div class="flex flex-col md:flex-row md:items-center">
+              <div class="md:w-1/2 md:pr-8 md:text-right">
+                <h4 class="text-xl font-medium mb-1">Mastery</h4>
+                <p>Full-stack development with modern frameworks and tools</p>
+              </div>
+              <div class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto md:mx-0">
+                <span>🔥</span>
+              </div>
+              <div class="md:w-1/2 md:pl-8 md:text-left"></div>
+            </div>
+            
+            <!-- Now -->
+            <div class="flex flex-col md:flex-row md:items-center">
+              <div class="md:w-1/2 md:pr-8 md:text-right"></div>
+              <div class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mx-auto md:mx-0">
+                <span>🌟</span>
+              </div>
+              <div class="md:w-1/2 md:pl-8 md:text-left">
+                <h4 class="text-xl font-medium mb-1">Now</h4>
+                <p>Building complex applications and exploring new technologies</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 md:py-24 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-3xl font-bold mb-12 text-center">
+        <span class="mr-2">🚀</span>
+        Featured Projects
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Form Builder -->
+        <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+          <img src="https://repository-images.githubusercontent.com/945454802/5b3adee3-164c-48d6-9824-72a72e1aeebe" 
+               class="w-full h-56 object-cover" 
+               alt="Form Builder Project" />
+          
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Form Builder</h3>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">Next.js</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">TypeScript</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">Tailwind</span>
+            </div>
+            
+            <p class="mb-6 text-gray-600 dark:text-gray-300">
+              Ultimate form creation tool with dark mode, modern dashboard, and secure authentication. Create, share, and manage responsive forms effortlessly.
+            </p>
+            
+            <div class="flex space-x-3">
+              <a href="https://github.com/magi8101/form-builder" 
+                 target="_blank"
+                 class="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg transition-colors duration-300 text-sm flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                Code
+              </a>
+              <a href="https://form-builder-magi.vercel.app" 
+                 target="_blank"
+                 class="px-4 py-2 bg-primary hover:bg-primaryDark text-white rounded-lg transition-colors duration-300 text-sm flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- WriteStart -->
+        <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+          <img src="https://repository-images.githubusercontent.com/945056200/d3f1b362-3a08-4569-9c95-8348738e1541" 
+               class="w-full h-56 object-cover" 
+               alt="WriteStart Project" />
+          
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">WriteStart</h3>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">React</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">CSS</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">HTML</span>
+            </div>
+            
+            <p class="mb-6 text-gray-600 dark:text-gray-300">
+              Sleek and user-friendly frontend for seamless writing. Whether you're blogging, journaling, or jotting down ideas, it offers a clean UI with a smooth experience.
+            </p>
+            
+            <div class="flex space-x-3">
+              <a href="https://github.com/magi8101/writerstart" 
+                 target="_blank"
+                 class="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg transition-colors duration-300 text-sm flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                Code
+              </a>
+              <a href="https://writestart.vercel.app" 
+                 target="_blank"
+                 class="px-4 py-2 bg-primary hover:bg-primaryDark text-white rounded-lg transition-colors duration-300 text-sm flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- MakeMyTrip Clone -->
+        <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+          <img src="https://repository-images.githubusercontent.com/924694185/2ef85a6d-ab39-464e-a6dd-b8e19c6eb19b" 
+               class="w-full h-56 object-cover" 
+               alt="MakeMyTrip Clone Project" />
+          
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">MakeMyTrip Clone</h3>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">JavaScript</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">CSS</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">HTML</span>
+            </div>
+            
+            <p class="mb-6 text-gray-600 dark:text-gray-300">
+              A functional clone of the MakeMyTrip homepage hero section, featuring a modern UI, responsive design, and dynamic interactions for flight search.
+            </p>
+            
+            <div class="flex space-x-3">
+              <a href="https://github.com/magi8101/make_my_trip" 
+                 target="_blank"
+                 class="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg transition-colors duration-300 text-sm flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                Code
+              </a>
+              <a href="https://makemytrip-clone-magi.vercel.app" 
+                 target="_blank"
+                 class="px-4 py-2 bg-primary hover:bg-primaryDark text-white rounded-lg transition-colors duration-300 text-sm flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pokédex -->
+        <div class="project-card bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+          <img src="https://repository-images.githubusercontent.com/937506250/f5a81f7e-d0a8-429e-adb0-5289d175116e" 
+               class="w-full h-56 object-cover" 
+               alt="Pokédex Project" />
+          
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Pokédex</h3>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">TypeScript</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">React</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">CSS</span>
+            </div>
+            
+            <p class="mb-6 text-gray-600 dark:text-gray-300">
+              An interactive Pokédex application built using TypeScript and React, featuring detailed information about Pokémon with a sleek user interface.
+            </p>
+            
+            <div class="flex space-x-3">
+              <a href="https://github.com/magi8101/pokedex" 
+                 target="_blank"
+                 class="px-4 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-lg transition-colors duration-300 text-sm flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                Code
+              </a>
+              <a href="https://pokedex-magi.vercel.app" 
+                 target="_blank"
+                 class="px-4 py-2 bg-primary hover:bg-primaryDark text-white rounded-lg transition-colors duration-300 text-sm flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <a href="https://github.com/magi8101?tab=repositories" 
+           target="_blank"
+           class="inline-block px-6 py-3 bg-primary hover:bg-primaryDark text-white rounded-lg transition-colors duration-300">
+          View All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- GitHub Stats Section -->
+  <section id="stats" class="py-16 md:py-24 bg-gray-100 dark:bg-gray-800">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-3xl font-bold mb-12 text-center">
+        <span class="mr-2">📊</span>
+        GitHub Stats
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        <!-- GitHub Stats Card -->
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-4 transform hover:scale-[1.02] transition-transform duration-300">
+          <h3 class="text-center text-lg font-semibold mb-3">Activity Overview</h3>
+          <img id="github-stats" 
+               src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=magi8101&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&bg_color=0D1117" 
+               class="w-full hidden dark:block" 
+               alt="GitHub Stats">
+          <img id="github-stats-light" 
+               src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=magi8101&show_icons=true&theme=buefy&hide_border=true&count_private=true&include_all_commits=true" 
+               class="w-full block dark:hidden" 
+               alt="GitHub Stats">
+        </div>
+        
+        <!-- GitHub Streak Stats -->
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-4 transform hover:scale-[1.02] transition-transform duration-300">
+          <h3 class="text-center text-lg font-semibold mb-3">Contribution Streak</h3>
+          <img id="github-streak" 
+               src="https://github-readme-streak-stats.herokuapp.com/?user=magi8101&theme=tokyonight&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&background=0D1117" 
+               class="w-full hidden dark:block" 
+               alt="GitHub Streak">
+          <img id="github-streak-light" 
+               src="https://github-readme-streak-stats.herokuapp.com/?user=magi8101&theme=buefy&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" 
+               class="w-full block dark:hidden" 
+               alt="GitHub Streak">
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Top Languages -->
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-4 transform hover:scale-[1.02] transition-transform duration-300">
+          <h3 class="text-center text-lg font-semibold mb-3">Top Languages</h3>
+          <img id="top-langs" 
+               src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=magi8101&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&bg_color=0D1117" 
+               class="w-full hidden dark:block" 
+               alt="Top Languages">
+          <img id="top-langs-light" 
+               src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=magi8101&layout=compact&theme=buefy&hide_border=true&langs_count=8" 
+               class="w-full block dark:hidden" 
+               alt="Top Languages">
+        </div>
+        
+        <!-- GitHub Trophies -->
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-4 transform hover:scale-[1.02] transition-transform duration-300">
+          <h3 class="text-center text-lg font-semibold mb-3">Achievements</h3>
+          <img id="github-trophies" 
+               src="https://github-profile-trophy.vercel.app/?username=magi8101&theme=tokyonight&no-frame=true&row=2&column=3&bg_color=0D1117" 
+               class="w-full hidden dark:block" 
+               alt="GitHub Trophies">
+          <img id="github-trophies-light" 
+               src="https://github-profile-trophy.vercel.app/?username=magi8101&theme=flat&no-frame=true&row=2&column=3" 
+               class="w-full block dark:hidden" 
+               alt="GitHub Trophies">
+        </div>
+      </div>
+      
+      <!-- Activity Graph -->
+      <div class="mt-10 bg-white dark:bg-gray-900 rounded-xl shadow-lg p-4">
+        <h3 class="text-center text-lg font-semibold mb-3">Contribution Activity</h3>
+        <img id="activity-graph" 
+             src="https://github-readme-activity-graph.vercel.app/graph?username=magi8101&theme=tokyo-night&hide_border=true&area=true&bg_color=0D1117" 
+             class="w-full hidden dark:block" 
+             alt="Activity Graph">
+        <img id="activity-graph-light" 
+             src="https://github-readme-activity-graph.vercel.app/graph?username=magi8101&theme=minimal&hide_border=true&area=true" 
+             class="w-full block dark:hidden" 
+             alt="Activity Graph">
+      </div>
+    </div>
+  </section>
+  
+  <!-- What Drives Me Section -->
+  <section class="py-16 md:py-24 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-3xl font-bold mb-12 text-center">
+        <span class="mr-2">💡</span>
+        What Drives Me
+      </h2>
+      
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/3 flex justify-center">
+          <div class="rounded-full overflow-hidden shadow-xl animate-pulse-slow">
+            <img src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif" class="w-64 h-64 object-cover" alt="Driving Force" />
+          </div>
+        </div>
+        
+        <div class="md:w-2/3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-xl font-semibold mb-2 text-primary">Innovation</h3>
+              <p>Always pushing the boundaries of what's possible and thinking outside the box.</p>
+            </div>
+            
+            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-xl font-semibold mb-2 text-primary">Collaboration</h3>
+              <p>Enjoying working with fellow developers to bring fresh ideas to life.</p>
+            </div>
+            
+            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-xl font-semibold mb-2 text-primary">Community</h3>
+              <p>Contributing to open-source projects and engaging in tech communities.</p>
+            </div>
+            
+            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 class="text-xl font-semibold mb-2 text-primary">Excellence</h3>
+              <p>Striving for clean, efficient, and maintainable code in everything I build.</p>
+            </div>
+            
+            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 sm:col-span-2">
+              <h3 class="text-xl font-semibold mb-2 text-primary">Learning</h3>
+              <p>Embracing new technologies and continuous improvement through every project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Quotes Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-3xl font-bold mb-12 text-center">
+        <span class="mr-2">💭</span>
+        Favorite Quotes
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <p class="text-gray-600 dark:text-gray-300 italic mb-4">
+            "Code is like humor. When you have to explain it, it's bad."
+          </p>
+          <p class="text-primary font-medium">– Cory House</p>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <p class="text-gray-600 dark:text-gray-300 italic mb-4">
+            "The best way to predict the future is to invent it."
+          </p>
+          <p class="text-primary font-medium">– Alan Kay</p>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <p class="text-gray-600 dark:text-gray-300 italic mb-4">
+            "Programming isn't about what you know; it's about what you can figure out."
+          </p>
+          <p class="text-primary font-medium">– Chris Pine</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Fun Facts Section -->
+  <section class="py-16 md:py-24 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-3xl font-bold mb-12 text-center">
+        <span class="mr-2">⚡</span>
+        Fun Facts
+      </h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex">
+          <span class="text-4xl mr-4">👨‍💻</span>
+          <div>
+            <h3 class="font-semibold mb-1">Polyglot Programmer</h3>
+            <p>I've written code in 10+ programming languages</p>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex">
+          <span class="text-4xl mr-4">☕</span>
+          <div>
+            <h3 class="font-semibold mb-1">Coffee Enthusiast</h3>
+            <p>I'm a coffee enthusiast and amateur barista</p>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex">
+          <span class="text-4xl mr-4">🏔️</span>
+          <div>
+            <h3 class="font-semibold mb-1">Mountain Climber</h3>
+            <p>I love hiking and have climbed several mountains</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <!-- Contact Section -->
+<section id="contact" class="py-16 md:py-24 bg-gray-100 dark:bg-gray-800">
+  <div class="container mx-auto px-6 md:px-12">
+    <h2 class="text-3xl font-bold mb-12 text-center">
+      <span class="mr-2">📬</span>
+      Let's Connect
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">Get In Touch</h3>
+        <p class="mb-6 text-gray-600 dark:text-gray-300">
+          Feel free to reach out for collaborations, opportunities, or just to say hello! I'm always open to discussing new projects and ideas.
+        </p>
+        
+        <div class="space-y-4">
+          <a href="mailto:sharmamagi0@gmail.com" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">
+            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            sharmamagi0@gmail.com
+          </a>
+          
+          <a href="https://linkedin.com/in/magi-sharma" target="_blank" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">
+            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            linkedin.com/in/magi-sharma
+          </a>
+          
+          <a href="https://github.com/magi8101" target="_blank" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">
+            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            github.com/magi8101
+          </a>
+          
+          <a href="https://instagram.com/shxrmx._xo" target="_blank" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">
+            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            instagram.com/shxrmx._xo
+          </a>
+          
+          <a href="https://magi-portfolio.netlify.app/" target="_blank" class="flex items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-300">
+            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 16.057v-3.057h2.994c-.059 1.143-.212 2.24-.456 3.279-.823-.12-1.674-.188-2.538-.222zm1.957 2.162c-.499 1.33-1.159 2.497-1.957 3.456v-3.62c.666.028 1.319.081 1.957.164zm-1.957-7.219v-3.015c.868-.034 1.721-.103 2.548-.224.238 1.027.389 2.111.446 3.239h-2.994zm0-5.014v-3.661c.806.969 1.471 2.15 1.971 3.496-.642.084-1.3.137-1.971.165zm2.703-3.267c1.237.496 2.354 1.228 3.29 2.146-.642.234-1.311.442-2.019.607-.344-.992-.775-1.91-1.271-2.753zm-7.241 13.56c-.244-1.039-.398-2.136-.456-3.279h2.994v3.057c-.865.034-1.714.102-2.538.222zm2.538 1.776v3.62c-.798-.959-1.458-2.126-1.957-3.456.638-.083 1.291-.136 1.957-.164zm-2.994-7.055c.057-1.128.207-2.212.446-3.239.827.121 1.68.19 2.548.224v3.015h-2.994zm1.024-5.179c.5-1.346 1.165-2.527 1.97-3.496v3.661c-.671-.028-1.329-.081-1.97-.165zm-2.005-.35c-.708-.165-1.377-.373-2.018-.607.937-.918 2.053-1.65 3.29-2.146-.496.844-.927 1.762-1.272 2.753zm-.549 1.918c-.264 1.151-.434 2.36-.492 3.611h-3.933c.165-1.658.739-3.197 1.617-4.518.88.361 1.816.67 2.808.907zm.009 9.262c-.988.236-1.92.542-2.797.9-.89-1.328-1.471-2.879-1.637-4.551h3.934c.058 1.265.231 2.488.5 3.651zm.553 1.917c.342.976.768 1.881 1.257 2.712-1.223-.49-2.326-1.211-3.256-2.115.636-.229 1.299-.435 1.999-.597zm9.924 0c.7.163 1.362.367 1.999.597-.931.903-2.034 1.625-3.257 2.116.489-.832.915-1.737 1.258-2.713zm.553-1.917c.27-1.163.442-2.386.501-3.651h3.934c-.167 1.672-.748 3.223-1.638 4.551-.877-.358-1.81-.664-2.797-.9zm.501-5.651c-.058-1.251-.229-2.46-.492-3.611.992-.237 1.929-.546 2.809-.907.877 1.321 1.451 2.86 1.616 4.518h-3.933z"/>
+            </svg>
+            magi-portfolio.netlify.app
+          </a>
+        </div>
+      </div>
+      
+      <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold mb-6">Send Me a Message</h3>
+        <form class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-800 dark:text-white" placeholder="Your name" required>
+          </div>
+          
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-800 dark:text-white" placeholder="Your email" required>
+          </div>
+          
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-800 dark:text-white" placeholder="Subject" required>
+          </div>
+          
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-800 dark:text-white" placeholder="Your message" required></textarea>
+          </div>
+          
+          <div class="pt-2">
+            <button type="submit" class="w-full bg-primary hover:bg-primaryDark text-white font-medium py-2 px-4 rounded-md transition-colors duration-300 flex items-center justify-center">
+              <span>Send Message</span>
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Current Time -->
+    <div class="mt-16 text-center">
+      <p class="text-gray-500 dark:text-gray-400">
+        Last updated: 2025-03-25 18:35:43 UTC
+      </p>
     </div>
   </div>
-</div>
-
-<!-- Recent Repositories Section -->
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <h2>
-    <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30px"> 
-    Recent Repositories
-  </h2>
-</div>
-
-<div align="center" class="repo-grid">
-  <a href="https://github.com/magi8101/form-builder">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=form-builder&theme=tokyonight&hide_border=true&bg_color=0D1117">
-      <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=form-builder&theme=buefy&hide_border=true">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=form-builder&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-    </picture>
-  </a>
-  <a href="https://github.com/magi8101/writerstart">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=writerstart&theme=tokyonight&hide_border=true&bg_color=0D1117">
-      <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=writerstart&theme=buefy&hide_border=true">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=writerstart&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-    </picture>
-  </a>
-  <a href="https://github.com/magi8101/writers-backend">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=writers-backend&theme=tokyonight&hide_border=true&bg_color=0D1117">
-      <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=writers-backend&theme=buefy&hide_border=true">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=writers-backend&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-    </picture>
-  </a>
-  <a href="https://github.com/magi8101/pokedex">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=pokedex&theme=tokyonight&hide_border=true&bg_color=0D1117">
-      <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=pokedex&theme=buefy&hide_border=true">
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=magi8101&repo=pokedex&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-    </picture>
-  </a>
-</div>
-
-<div align="center">
-  <p>View all my repositories <a href="https://github.com/magi8101?tab=repositories">here</a>.</p>
-</div>
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <h2>
-    <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="30px">
-    My Journey
-  </h2>
-</div>
-
-<div align="center">
-  <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="100" height="100" class="bounce">
-</div>
-
-<p align="center">
-  My coding adventure began with a curious mind, and I quickly found my passion in both front-end and back-end development. Over the years, I've built projects ranging from sleek web interfaces to scalable server applications. Each project has been a stepping stone, propelling me forward and refining my craft.
-</p>
-
-<!-- Development Timeline -->
-<div align="center">
-  <h3>My Development Timeline</h3>
+</section>
   
-  <table align="center" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td align="center">🌱</td>
-      <td><b>Beginning:</b> Started with HTML, CSS, and basic JavaScript</td>
-    </tr>
-    <tr>
-      <td align="center">🚀</td>
-      <td><b>Growth:</b> Expanded to React, Node.js, and database technologies</td>
-    </tr>
-    <tr>
-      <td align="center">🔥</td>
-      <td><b>Mastery:</b> Full-stack development with modern frameworks and tools</td>
-    </tr>
-    <tr>
-      <td align="center">🌟</td>
-      <td><b>Now:</b> Building complex applications and exploring new technologies</td>
-    </tr>
-  </table>
-</div>
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <h2>
-    <img src="https://media.giphy.com/media/Vf3ZKdillTMOOaOho0/giphy.gif" width="30px">
-    What Drives Me
-  </h2>
-</div>
-
-<table align="center" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td style="border: none;">
-      <img src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif" width="250" class="pulse" />
-    </td>
-    <td style="border: none;">
-      <ul>
-        <li><b>Innovation:</b> Always pushing the boundaries of what's possible</li>
-        <li><b>Collaboration:</b> Enjoying working with fellow developers to bring fresh ideas to life</li>
-        <li><b>Community:</b> Contributing to open-source projects and engaging in tech communities</li>
-        <li><b>Excellence:</b> Striving for clean, efficient, and maintainable code</li>
-        <li><b>Learning:</b> Embracing new technologies and continuous improvement</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <h2>
-    <img src="https://media.giphy.com/media/juua9i2c2fA0AIp2iq/giphy.gif" width="30px">
-    Featured Projects
-  </h2>
-</div>
-
-<!-- Featured Projects -->
-<div align="center">
-  <div class="projects-container">
-    <div class="project-item">
-      <h3 align="center">Form Builder</h3>
-      <div align="center">
-        <a href="https://github.com/magi8101/form-builder" target="_blank">
-          <img src="https://repository-images.githubusercontent.com/945454802/5b3adee3-164c-48d6-9824-72a72e1aeebe" width="100%" alt="Form Builder Project" class="project-image"/>
-        </a>
-        <p>
-          <a href="https://github.com/magi8101/form-builder" target="_blank">
-            <img src="https://img.shields.io/badge/Code-98b982?style=for-the-badge&logo=github&logoColor=black" />
-          </a>
-          <a href="https://form-builder-magi.vercel.app" target="_blank">
-            <img src="https://img.shields.io/badge/Live-6A5ACD?style=for-the-badge&logo=vercel&logoColor=white" />
-          </a>
-        </p>
-        <p><strong>Next.js, TypeScript, Tailwind CSS</strong> - Ultimate form creation tool with dark mode, modern dashboard, and secure authentication. Create, share, and manage responsive forms effortlessly.</p>
-      </div>
-    </div>
-    <div class="project-item">
-      <h3 align="center">WriteStart</h3>
-      <div align="center">
-        <a href="https://github.com/magi8101/writerstart" target="_blank">
-          <img src="https://repository-images.githubusercontent.com/945056200/d3f1b362-3a08-4569-9c95-8348738e1541" width="100%" alt="WriteStart Project" class="project-image"/>
-        </a>
-        <p>
-          <a href="https://github.com/magi8101/writerstart" target="_blank">
-            <img src="https://img.shields.io/badge/Code-98b982?style=for-the-badge&logo=github&logoColor=black" />
-          </a>
-          <a href="https://writestart.vercel.app" target="_blank">
-            <img src="https://img.shields.io/badge/Live-6A5ACD?style=for-the-badge&logo=vercel&logoColor=white" />
-          </a>
-        </p>
-        <p><strong>HTML, CSS, React</strong> - Sleek and user-friendly frontend for seamless writing. Whether you're blogging, journaling, or jotting down ideas, it offers a clean UI with a smooth experience.</p>
-      </div>
-    </div>
-    <div class="project-item">
-      <h3 align="center">MakeMyTrip Clone</h3>
-      <div align="center">
-        <a href="https://github.com/magi8101/make_my_trip" target="_blank">
-          <img src="https://repository-images.githubusercontent.com/924694185/2ef85a6d-ab39-464e-a6dd-b8e19c6eb19b" width="100%" alt="MakeMyTrip Clone" class="project-image"/>
-        </a>
-        <p>
-          <a href="https://github.com/magi8101/make_my_trip" target="_blank">
-            <img src="https://img.shields.io/badge/Code-98b982?style=for-the-badge&logo=github&logoColor=black" />
-          </a>
-          <a href="https://makemytrip-clone-magi.vercel.app" target="_blank">
-            <img src="https://img.shields.io/badge/Live-6A5ACD?style=for-the-badge&logo=vercel&logoColor=white" />
-          </a>
-        </p>
-        <p><strong>JavaScript, CSS, HTML</strong> - A functional clone of the MakeMyTrip homepage hero section, featuring a modern UI, responsive design, and dynamic interactions for flight search.</p>
-      </div>
-    </div>
-    <div class="project-item">
-      <h3 align="center">Pokédex</h3>
-      <div align="center">
-        <a href="https://github.com/magi8101/pokedex" target="_blank">
-          <img src="https://repository-images.githubusercontent.com/937506250/f5a81f7e-d0a8-429e-adb0-5289d175116e" width="100%" alt="Pokedex App" class="project-image"/>
-        </a>
-        <p>
-          <a href="https://github.com/magi8101/pokedex" target="_blank">
-            <img src="https://img.shields.io/badge/Code-98b982?style=for-the-badge&logo=github&logoColor=black" />
-          </a>
-          <a href="https://pokedex-magi.vercel.app" target="_blank">
-            <img src="https://img.shields.io/badge/Live-6A5ACD?style=for-the-badge&logo=vercel&logoColor=white" />
-          </a>
-        </p>
-        <p><strong>TypeScript, CSS, React</strong> - An interactive Pokédex application built using TypeScript and React, featuring detailed information about Pokémon with a sleek user interface.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div align="center" class="view-all-btn">
-  <a href="https://github.com/magi8101?tab=repositories" target="_blank">
-    <img src="https://img.shields.io/badge/View%20All%20Projects-6A5ACD?style=for-the-badge&logo=github&logoColor=white" alt="View All Projects" />
-  </a>
-</div>
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <h2>
-    <img src="https://media.giphy.com/media/cj87CxfRtrUifF3Ryk/giphy.gif" width="30px">
-    Activity Graph
-  </h2>
-</div>
-
-<div align="center">
-  <a href="https://github.com/ashutosh00710/github-readme-activity-graph">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=magi8101&theme=tokyo-night&hide_border=true&area=true&bg_color=0D1117">
-      <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=magi8101&theme=minimal&hide_border=true&area=true">
-      <img src="https://github-readme-activity-graph.vercel.app/graph?username=magi8101&theme=tokyo-night&hide_border=true&area=true&bg_color=0D1117" alt="Magi's Activity Graph" width="100%" />
-    </picture>
-  </a>
-</div>
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <h2>
-    <img src="https://media.giphy.com/media/MIGbtLZoVjbl0bYbAd/giphy.gif" width="30px">
-    Let's Connect
-  </h2>
-</div>
-
-<!-- Social Media Links -->
-<p align="center" class="social-links">
-  <a href="mailto:sharmamagi0@gmail.com" class="social-icon">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  <a href="https://linkedin.com/in/magi-sharma" class="social-icon">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://instagram.com/shxrmx._xo" class="social-icon">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
-  </a>
-  <a href="https://github.com/magi8101" class="social-icon">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-  <a href="https://magi-portfolio.netlify.app/" class="social-icon">
-    <img src="https://img.shields.io/badge/Portfolio-8A2BE2?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
-  </a>
-</p>
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-</div>
-
-<!-- Profile Views Counter - Updates automatically -->
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=magi8101&color=blueviolet&style=for-the-badge" alt="Profile Views" />
-</div>
-
-<div align="center">
-  <h3>💭 Favorite Quotes</h3>
-  <blockquote>
-    "Code is like humor. When you have to explain it, it's bad." – Cory House
-  </blockquote>
-  <blockquote>
-    "The best way to predict the future is to invent it." – Alan Kay
-  </blockquote>
-  <blockquote>
-    "Programming isn't about what you know; it's about what you can figure out." – Chris Pine
-  </blockquote>
-</div>
-
-<!-- Spotify and Weather sections commented out for future addition -->
-<!--
-<div align="center">
-  <h3>🎵 Currently Vibing To</h3>
-  <a href="https://spotify-github-profile.vercel.app/api/view?uid=Magi&redirect=true">
-    <img src="https://spotify-github-profile.vercel.app/api/view?uid=Magi&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=true&bar_color=53b14f&bar_color_cover=false" alt="spotify-github-profile" />
-  </a>
-</div>
-
-<div align="center">
-  <h3>🌤️ Weather in Sholinghur</h3>
-  <img src="https://wttr.in/Sholinghur?format=4&background=1F222E&border=1F222E&color=FFFFFF" alt="Weather in Sholinghur" />
-</div>
--->
-
-<div align="center">
-  <h3>⚡ Fun Facts</h3>
-  <ul align="left" style="display: inline-block; text-align: left;">
-    <li>I've written code in 10+ programming languages</li>
-    <li>I'm a coffee enthusiast and amateur barista</li>
-    <li>I love hiking and have climbed several mountains</li>
-  </ul>
-</div>
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <h2>🏆 GitHub Achievements</h2>
-  <p align="center">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=magi8101&theme=tokyonight&no-frame=true&row=1&column=7&bg_color=0D1117">
-      <source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=magi8101&theme=flat&no-frame=true&row=1&column=7">
-      <img src="https://github-profile-trophy.vercel.app/?username=magi8101&theme=tokyonight&no-frame=true&row=1&column=7&bg_color=0D1117" alt="Magi's Trophies" />
-    </picture>
-  </p>
-</div>
-
-<!-- Support section commented out for future addition -->
-<!--
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <h2>🙏 Support</h2>
-  <p>If you like my work, please consider supporting me!</p>
-  <a href="https://www.buymeacoffee.com/magi8101" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217">
-  </a>
-</div>
--->
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <p>Time Now: <img src="https://img.shields.io/badge/2025--03--25%2018%3A03%3A32-6A5ACD?style=flat-square" alt="Current Time"></p>
-  
-  <!-- Animated Typing Text -->
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=6A5ACD&center=true&vCenter=true&random=false&width=500&lines=Thanks+for+visiting+my+profile!;Let's+build+something+amazing+together!;Feel+free+to+reach+out+anytime!;Happy+coding!" alt="Typing SVG" />
-  </a>
-</div>
-
-<!-- CSS Animation - Not all of these will work on GitHub, but those that do will add nice effects -->
-<style>
-  .animated-hand {
-    animation: wave 1.5s infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
-  }
-  
-  @keyframes wave {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-  }
-  
-  .bounce {
-    animation: bounce 2s infinite;
-  }
-  
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-20px); }
-    60% { transform: translateY(-10px); }
-  }
-  
-  .pulse {
-    animation: pulse 2s infinite;
-  }
-  
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-  
-  .project-image {
-    transition: transform 0.3s;
-  }
-  
-  .project-image:hover {
-    transform: scale(1.03);
-  }
-  
-  .social-icon {
-    transition: transform 0.3s;
-    display: inline-block;
-    margin: 0 5px;
-  }
-  
-  .social-icon:hover {
-    transform: translateY(-3px);
-  }
-  
-  .stats-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .stats-item {
-    flex: 1 1 45%;
-    min-width: 300px;
-    margin-bottom: 10px;
-  }
-  
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
-    gap: 15px;
-    max-width: 100%;
-  }
-  
-  .project-item {
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .project-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .repo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
-    gap: 10px;
-  }
-  
-  .view-all-btn {
-    margin-top: 25px;
-    transition: transform 0.3s;
-  }
-  
-  .view-all-btn:hover {
-    transform: scale(1.05);
-  }
-</style>
