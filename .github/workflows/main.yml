@@ -19,9 +19,11 @@ jobs:
         uses: actions/checkout@v3
       
       - name: Update README with current date and time
+        id: update-readme
         run: |
-          # Get current date and time in UTC format
+          # Get current date and time in UTC format YYYY-MM-DD HH:MM:SS
           CURRENT_DATE=$(date -u "+%Y-%m-%d %H:%M:%S")
+          # Format for badge URL encoding
           BADGE_DATE=$(date -u "+%Y-%m-%d%%20%H%%3A%M%%3A%S")
           
           # Update date and time in README.md (Line 28 and Line 500)
@@ -29,12 +31,12 @@ jobs:
           sed -i "500s|<p>Time Now: <img src=\"https://img.shields.io/badge/.*-6A5ACD?style=flat-square\" alt=\"Current Time\"></p>|<p>Time Now: <img src=\"https://img.shields.io/badge/$BADGE_DATE-6A5ACD?style=flat-square\" alt=\"Current Time\"></p>|" README.md
           
           echo "README updated with current date and time: $CURRENT_DATE"
+          echo "current_date=$CURRENT_DATE" >> $GITHUB_ENV
       
-      - name: Push changes
+      - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
         with:
-          message: 'Update README with current date and time'
-          add: 'README.md'
-          author_name: 'github-actions[bot]'
-          author_email: 'github-actions[bot]@users.noreply.github.com'
-          pull: '--rebase'  # Pull and rebase before pushing
+          message: "Update README with current date: ${{ env.current_date }} UTC"
+          add: "README.md"
+          default_author: github_actions
+          pull_strategy: 'NO-PULL' # IMPORTANT: This uses a merge commit strategy that avoids conflicts
