@@ -39,4 +39,3 @@ jobs:
           message: "Update README with current date: ${{ env.current_date }} UTC"
           add: "README.md"
           default_author: github_actions
-          pull_strategy: 'NO-PULL' # IMPORTANT: This uses a merge commit strategy that avoids conflicts
