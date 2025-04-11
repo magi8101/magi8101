@@ -1,0 +1,41 @@
+name: Update README with current date and time
+
+on:
+  schedule:
+    # Runs every 6 hours
+    - cron: '0 */6 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      
+      - name: Update README with current date and time
+        run: |
+          # Get current date and time in UTC format
+          CURRENT_DATE=$(date -u "+%Y-%m-%d %H:%M:%S")
+          BADGE_DATE=$(date -u "+%Y-%m-%d%%20%H%%3A%M%%3A%S")
+          
+          # Update date and time in README.md (Line 28 and Line 500)
+          sed -i "28s|<img src=\"https://img.shields.io/badge/Current%20Time-.*-6A5ACD?style=for-the-badge\" alt=\"Current Time\" />|<img src=\"https://img.shields.io/badge/Current%20Time-$BADGE_DATE-6A5ACD?style=for-the-badge\" alt=\"Current Time\" />|" README.md
+          sed -i "500s|<p>Time Now: <img src=\"https://img.shields.io/badge/.*-6A5ACD?style=flat-square\" alt=\"Current Time\"></p>|<p>Time Now: <img src=\"https://img.shields.io/badge/$BADGE_DATE-6A5ACD?style=flat-square\" alt=\"Current Time\"></p>|" README.md
+          
+          echo "README updated with current date and time: $CURRENT_DATE"
+      
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update README with current date: $(date -u)" && git push)
