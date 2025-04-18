@@ -25,7 +25,7 @@
 <!-- Status Section -->
 <div align="center">
   <p>
-    <img src="https://img.shields.io/badge/Current%20Time-2025-04-18%2012%3A35%3A34-6A5ACD?style=for-the-badge" alt="Current Time" />
+    <img src="https://img.shields.io/badge/Current%20Time-2025-04-18%2018%3A25%3A05-6A5ACD?style=for-the-badge" alt="Current Time" />
     <img src="https://img.shields.io/github/last-commit/magi8101/magi8101?style=for-the-badge&color=6A5ACD&label=Last%20Updated" alt="Last Updated" />
   </p>
 </div>
@@ -497,7 +497,7 @@
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <p>Time Now: <img src="https://img.shields.io/badge/2025-04-18%2012%3A35%3A34-6A5ACD?style=flat-square" alt="Current Time"></p>
+  <p>Time Now: <img src="https://img.shields.io/badge/2025-04-18%2018%3A25%3A05-6A5ACD?style=flat-square" alt="Current Time"></p>
   
   <!-- Animated Typing Text -->
   <a href="https://git.io/typing-svg">
