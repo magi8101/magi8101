@@ -28,12 +28,12 @@ jobs:
           # Current user's login
           USER_LOGIN="magi8101"
           
-          # Update date and time in README.md (Line 28 and Line 500)
+          # Update date and time in README.md (line 28 and line 500)
           sed -i "28s|<img src=\"https://img.shields.io/badge/Current%20Time-.*-6A5ACD?style=for-the-badge\" alt=\"Current Time\" />|<img src=\"https://img.shields.io/badge/Current%20Time-$BADGE_DATE-6A5ACD?style=for-the-badge\" alt=\"Current Time\" />|" README.md
           sed -i "500s|<p>Time Now: <img src=\"https://img.shields.io/badge/.*-6A5ACD?style=flat-square\" alt=\"Current Time\"></p>|<p>Time Now: <img src=\"https://img.shields.io/badge/$BADGE_DATE-6A5ACD?style=flat-square\" alt=\"Current Time\"></p>|" README.md
           
-          # Update user login information
-          sed -i "s|<img src=\"https://img.shields.io/badge/User-.*-blue?style=for-the-badge\" alt=\"Current User\" />|<img src=\"https://img.shields.io/badge/User-$USER_LOGIN-blue?style=for-the-badge\" alt=\"Current User\" />|" README.md
+          # Update user login information (line 29)
+          sed -i "29s|<img src=\"https://img.shields.io/badge/User-.*-blue?style=for-the-badge\" alt=\"Current User\" />|<img src=\"https://img.shields.io/badge/User-$USER_LOGIN-blue?style=for-the-badge\" alt=\"Current User\" />|" README.md
           
           echo "README updated with current date and time: $CURRENT_DATE"
           echo "current_date=$CURRENT_DATE" >> $GITHUB_ENV
