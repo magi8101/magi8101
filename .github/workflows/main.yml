@@ -2,8 +2,8 @@ name: Update README with current date and time
 
 on:
   schedule:
-    # Runs every 6 hours
-    - cron: '0 */6 * * *'
+    # Runs every minute
+    - cron: '* * * * *'
   
   # Allow manual trigger
   workflow_dispatch:
@@ -25,17 +25,23 @@ jobs:
           CURRENT_DATE=$(date -u "+%Y-%m-%d %H:%M:%S")
           # Format for badge URL encoding
           BADGE_DATE=$(date -u "+%Y-%m-%d%%20%H%%3A%M%%3A%S")
+          # Current user's login
+          USER_LOGIN="magi8101"
           
           # Update date and time in README.md (Line 28 and Line 500)
           sed -i "28s|<img src=\"https://img.shields.io/badge/Current%20Time-.*-6A5ACD?style=for-the-badge\" alt=\"Current Time\" />|<img src=\"https://img.shields.io/badge/Current%20Time-$BADGE_DATE-6A5ACD?style=for-the-badge\" alt=\"Current Time\" />|" README.md
           sed -i "500s|<p>Time Now: <img src=\"https://img.shields.io/badge/.*-6A5ACD?style=flat-square\" alt=\"Current Time\"></p>|<p>Time Now: <img src=\"https://img.shields.io/badge/$BADGE_DATE-6A5ACD?style=flat-square\" alt=\"Current Time\"></p>|" README.md
           
+          # Update user login information
+          sed -i "s|<img src=\"https://img.shields.io/badge/User-.*-blue?style=for-the-badge\" alt=\"Current User\" />|<img src=\"https://img.shields.io/badge/User-$USER_LOGIN-blue?style=for-the-badge\" alt=\"Current User\" />|" README.md
+          
           echo "README updated with current date and time: $CURRENT_DATE"
           echo "current_date=$CURRENT_DATE" >> $GITHUB_ENV
+          echo "user_login=$USER_LOGIN" >> $GITHUB_ENV
       
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
         with:
-          message: "Update README with current date: ${{ env.current_date }} UTC"
+          message: "Update README with current date: ${{ env.current_date }} UTC and user: ${{ env.user_login }}"
           add: "README.md"
           default_author: github_actions
