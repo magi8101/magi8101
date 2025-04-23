@@ -3,7 +3,7 @@
 # ✨ Welcome to Magi Sharma's Coding Universe ✨
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=30&pause=1000&color=6A5ACD&center=true&vCenter=true&random=false&width=600&height=100&lines=Full-Stack+Developer;Problem+Solver;Tech+Enthusiast;Lifelong+Learner;Code+Craftsman;UI/UX+Enthusiast" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=30&pause=1000&color=6A5ACD&center=true&vCenter=true&random=false&width=600&height=100&lines=Full-Stack+Developer;Python+Enthusiast;JavaScript+Lover;Open+Source+Contributor" alt="Typing SVG" />
 </div>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
@@ -25,7 +25,8 @@
 <!-- Status Section -->
 <div align="center">
   <p>
-    <img src="https://img.shields.io/badge/Current%20Time-2025-04-23%2018%3A27%3A35-6A5ACD?style=for-the-badge" alt="Current Time" />
+    <img src="https://img.shields.io/badge/Current%20Time-2025-04-23%2018%3A27%3A06-6A5ACD?style=for-the-badge" alt="Current Time" />
+    <img src="https://img.shields.io/badge/User-magi8101-blue?style=for-the-badge" alt="Current User" />
     <img src="https://img.shields.io/github/last-commit/magi8101/magi8101?style=for-the-badge&color=6A5ACD&label=Last%20Updated" alt="Last Updated" />
   </p>
 </div>
@@ -56,7 +57,7 @@
 <table align="center" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td style="border: none;">
-      <p>I'm a passionate developer, tech enthusiast, and lifelong learner dedicated to creating impactful solutions through code. With expertise in both front-end and back-end development, I transform complex problems into elegant solutions.</p>
+      <p>I'm a passionate developer, tech enthusiast, and lifelong learner dedicated to creating impactful solutions through code. With expertise in both front-end and back-end development, I transform ideas into elegant, functional applications.</p>
       <ul>
         <li>🔭 I'm currently working on expanding my development portfolio</li>
         <li>🌱 I'm constantly learning new technologies and frameworks</li>
@@ -240,7 +241,7 @@
 </div>
 
 <p align="center">
-  My coding adventure began with a curious mind, and I quickly found my passion in both front-end and back-end development. Over the years, I've built projects ranging from sleek web interfaces to scalable server applications. Each project has been a stepping stone, propelling me forward and refining my craft.
+  My coding adventure began with a curious mind, and I quickly found my passion in both front-end and back-end development. Over the years, I've built projects ranging from sleek web interfaces to robust backend systems, always striving to create innovative solutions that make a real impact.
 </p>
 
 <!-- Development Timeline -->
@@ -317,7 +318,7 @@
             <img src="https://img.shields.io/badge/Live-6A5ACD?style=for-the-badge&logo=vercel&logoColor=white" />
           </a>
         </p>
-        <p><strong>Next.js, TypeScript, Tailwind CSS</strong> - Ultimate form creation tool with dark mode, modern dashboard, and secure authentication. Create, share, and manage responsive forms effortlessly.</p>
+        <p><strong>Next.js, TypeScript, Tailwind CSS</strong> - Ultimate form creation tool with dark mode, modern dashboard, and secure authentication. Create, share, and manage responsive forms with ease.</p>
       </div>
     </div>
     <div class="project-item">
@@ -334,7 +335,7 @@
             <img src="https://img.shields.io/badge/Live-6A5ACD?style=for-the-badge&logo=vercel&logoColor=white" />
           </a>
         </p>
-        <p><strong>HTML, CSS, React</strong> - Sleek and user-friendly frontend for seamless writing. Whether you're blogging, journaling, or jotting down ideas, it offers a clean UI with a smooth experience.</p>
+        <p><strong>HTML, CSS, React</strong> - Sleek and user-friendly frontend for seamless writing. Whether you're blogging, journaling, or jotting down ideas, it offers a clean UI with a smooth writing experience.</p>
       </div>
     </div>
     <div class="project-item">
@@ -368,7 +369,7 @@
             <img src="https://img.shields.io/badge/Live-6A5ACD?style=for-the-badge&logo=vercel&logoColor=white" />
           </a>
         </p>
-        <p><strong>TypeScript, CSS, React</strong> - An interactive Pokédex application built using TypeScript and React, featuring detailed information about Pokémon with a sleek user interface.</p>
+        <p><strong>TypeScript, CSS, React</strong> - An interactive Pokédex application built using TypeScript and React, featuring detailed information about Pokémon with a sleek user interface and search functionality.</p>
       </div>
     </div>
   </div>
@@ -497,11 +498,11 @@
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-  <p>Time Now: <img src="https://img.shields.io/badge/2025-04-23%2018%3A27%3A35-6A5ACD?style=flat-square" alt="Current Time"></p>
+  <p>Time Now: <img src="https://img.shields.io/badge/2025-04-23%2018%3A27%3A06-6A5ACD?style=flat-square" alt="Current Time"></p>
   
   <!-- Animated Typing Text -->
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=6A5ACD&center=true&vCenter=true&random=false&width=500&lines=Thanks+for+visiting+my+profile!;Let's+build+something+amazing+together!;Feel+free+to+reach+out+anytime!;Happy+coding!" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=6A5ACD&center=true&vCenter=true&random=false&width=500&lines=Thanks+for+visiting+my+profile!;Let's+build+something+amazing+together!;Have+a+great+day!" alt="Typing SVG" />
   </a>
 </div>
 
