@@ -52,5 +52,6 @@ Interactive Pokémon information system with advanced search features
 
 ## 🤝 Let's Connect
 Always open to interesting projects and collaborations!
+
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sharmamagi0@gmail.com)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/shxrmx._xo)
