@@ -52,3 +52,4 @@ Interactive Pokémon information system with advanced search features
 
 ## 🤝 Let's Connect
 Always open to interesting projects and collaborations!
+**[gmail](sharmamagi0@gmail.com)
