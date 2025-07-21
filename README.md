@@ -49,9 +49,6 @@ Interactive Pokémon information system with advanced search features
 - 📱 Ensure mobile-first, cross-browser compatibility
 - 🚀 Deploy applications with CI/CD best practices
 
-## 📊 GitHub Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=magi8101&show_icons=true&theme=default&hide_border=true&count_private=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=magi8101&layout=compact&theme=default&hide_border=true)
 
 ## 🤝 Let's Connect
 Always open to interesting projects and collaborations!
