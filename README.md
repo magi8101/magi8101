@@ -1,5 +1,3 @@
-# Magi Sharma
-
 <div align="center">
   
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/magi-sharma)
@@ -11,27 +9,35 @@
 </div>
 
 ## About Me
-- I like to code
+- I'm Magi Sharma, Systems Engineer & Compiler Dev. Building JustJIT (Python 3.13 + LLVM ORC). Contributing to Opensrc
   
 ## Featured Projects
+[![pyexec-compiler](https://gitmystat.vercel.app/repo?username=magi8101&repo=pyexec-compiler&theme=gold&color=0xEBE9E1&accent=0xebe9e185&background=0x0C0C0C&tip=0xFF6265)](https://github.com/magi8101/pyexec-compiler)
 
-**[pyexec-compiler](https://github.com/magi8101/pyexec-compiler)** 
-Educational Python JIT/AOT compiler with Numba, LLVM & WebAssembly backends. Learn compilation techniques through hands-on experimentation.
+[![velocix](https://gitmystat.vercel.app/repo?username=magi8101&repo=velocix&theme=gold&color=0xEBE9E1&accent=0xebe9e185&background=0x0C0C0C&tip=0xFF6265)](https://github.com/magi8101/velocix)
 
-**[velocix](https://github.com/magi8101/velocix)**  
-A learning project where I rebuilt Starlette's core patterns to understand how modern async Python web frameworks work
+[![toon-parser](https://gitmystat.vercel.app/repo?username=magi8101&repo=toon-parser&theme=gold&color=0xEBE9E1&accent=0xebe9e185&background=0x0C0C0C&tip=0xFF6265)](https://github.com/magi8101/toon-parser)
 
-**[toon-parser](https://github.com/magi8101/toon-parser)** 
-this a High-performance Python bindings for the TOON format parser, built with PyO3 and Rust. faster than pure Python implementations, optimized for tabular data and LLM applications
+[![Justjit](https://gitmystat.vercel.app/repo?username=magi8101&repo=Justjit&theme=gold&color=0xEBE9E1&accent=0xebe9e185&background=0x0C0C0C&tip=0xFF6265)](https://github.com/magi8101/Justjit)
 
-**[Justjit](https://github.com/magi8101/Justjit)**   
-this is an jit compiler stack based byte code compiler for python using llvm im trying to do all the 100+ opcode implemenattaion this is my hobby project
+## Technologies & Languages
+<div align='left'>
+  <a href="https://github.com/magi8101">
+    <img width="273"src="https://gitmystat.vercel.app/user?theme=dark&username=magi8101&color=0xffffff&accent=0x665757&background=0x000000&border=0x000000&tip=0xa52020"></img>
+  </a>
+  <a href="https://github.com/magi8101?tab=repositories">
+      <img src="https://gitmystat.vercel.app/top?theme=dark&username=magi8101&layout=bar&color=0xffffff&accent=0x665757&background=0x000000&border=0x000000&tip=0xa52020"></img>
+    </a>
+</div>
 
-## What I Do
--  Build open-source
+## I'M WORKING ON
+
+[![](https://gitmystat.vercel.app/recent?theme=dark&username=magi8101&color=0xffffff&accent=0x665757&background=0x000000&border=0x000000&tip=0xa52020)](https://github.com/magi8101/Justjit)
 
 ## Let's Connect
 Always open to interesting projects and collaborations!
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sharmamagi0@gmail.com)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/shxrmx._xo)
+
+*Special thanks to [Rahuletto](https://github.com/Rahuletto/Rahuletto) for the themes.*
