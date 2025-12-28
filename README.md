@@ -9,7 +9,7 @@
 </div>
 
 ## About Me
-- I'm Magi Sharma, Systems Engineer & Compiler Dev. Building JustJIT (Python 3.13 + LLVM ORC). Contributing to Opensrc
+- I’m Magi Sharma, a systems engineer focused on compiler design, runtimes, and performance. I build experimental JIT/AOT compilers, explore LLVM internals, and study Python execution at the bytecode and IR level. While much of my work centers on Python-related systems, I also explore broader low-level and compiler technologies.
   
 ## Featured Projects
 [![pyexec-compiler](https://gitmystat.vercel.app/repo?username=magi8101&repo=pyexec-compiler&theme=gold&color=0xEBE9E1&accent=0xebe9e185&background=0x0C0C0C&tip=0xFF6265)](https://github.com/magi8101/pyexec-compiler)
