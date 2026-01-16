@@ -32,7 +32,7 @@
 
 ## I'M WORKING ON
 
-[![](https://gitmystat.vercel.app/recent?theme=dark&username=magi8101&color=0xffffff&accent=0x665757&background=0x000000&border=0x000000&tip=0xa52020)](https://github.com/magi8101/Justjit)
+[![](https://gitmystat.vercel.app/recent?theme=dark&username=magi8101&color=0xffffff&accent=0x665757&background=0x000000&border=0x000000&tip=0xa52020)]()
 
 ## Let's Connect
 Always open to interesting projects and collaborations!
@@ -40,4 +40,4 @@ Always open to interesting projects and collaborations!
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sharmamagi0@gmail.com)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/shxrmx._xo)
 
-*Special thanks to [Rahuletto](https://github.com/Rahuletto/Rahuletto) for the themes.*
+*Special thanks to [Rahuletto](https://github.com/Rahuletto) for the themes.*
