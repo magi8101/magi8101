@@ -10,25 +10,8 @@
 
 ## About Me
 - I’m Magi Sharma, a systems engineer focused on compiler design, runtimes, and performance. I build experimental JIT/AOT compilers, explore LLVM internals, and study Python execution at the bytecode and IR level. While much of my work centers on Python-related systems, I also explore broader low-level and compiler technologies.
-  
-## Featured Projects
-[![pyexec-compiler](https://gitmystat.vercel.app/repo?username=magi8101&repo=pyexec-compiler&theme=gold&color=0xEBE9E1&accent=0xebe9e185&background=0x0C0C0C&tip=0xFF6265)](https://github.com/magi8101/pyexec-compiler)
 
-[![velocix](https://gitmystat.vercel.app/repo?username=magi8101&repo=velocix&theme=gold&color=0xEBE9E1&accent=0xebe9e185&background=0x0C0C0C&tip=0xFF6265)](https://github.com/magi8101/velocix)
 
-[![toon-parser](https://gitmystat.vercel.app/repo?username=magi8101&repo=toon-parser&theme=gold&color=0xEBE9E1&accent=0xebe9e185&background=0x0C0C0C&tip=0xFF6265)](https://github.com/magi8101/toon-parser)
-
-[![Justjit](https://gitmystat.vercel.app/repo?username=magi8101&repo=Justjit&theme=gold&color=0xEBE9E1&accent=0xebe9e185&background=0x0C0C0C&tip=0xFF6265)](https://github.com/magi8101/Justjit)
-
-## Technologies & Languages
-<div align='left'>
-  <a href="https://github.com/magi8101">
-    <img width="273"src="https://gitmystat.vercel.app/user?theme=dark&username=magi8101&color=0xffffff&accent=0x665757&background=0x000000&border=0x000000&tip=0xa52020"></img>
-  </a>
-  <a href="https://github.com/magi8101?tab=repositories">
-      <img src="https://gitmystat.vercel.app/top?theme=dark&username=magi8101&layout=bar&color=0xffffff&accent=0x665757&background=0x000000&border=0x000000&tip=0xa52020"></img>
-    </a>
-</div>
 
 ## I'M WORKING ON
 
