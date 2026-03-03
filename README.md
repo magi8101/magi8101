@@ -14,8 +14,7 @@
 
 
 ## I'M WORKING ON
-
-[![](https://git-my-stat.vercel.app/recent?theme=dark&username=magi8101&color=0xffffff&accent=0x665757&background=0x000000&border=0x000000&tip=0xa52020)]()
+[![Recently Worked On](https://git-my-stat.vercel.app/recent?theme=dark&username=magi8101&color=0xffffff&accent=0x6657578&background=0x000000&border=0x000000&tip=0xa52020)](https://git-my-stat.vercel.app/recent/link?username=magi8101)
 
 ## Let's Connect
 Always open to interesting projects and collaborations!
